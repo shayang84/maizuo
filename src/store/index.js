@@ -1,7 +1,15 @@
 import { createStore } from 'vuex'
 import axiosrequest from '@/util/axiosrequest'
-
+import createPersistedState from 'vuex-persistedstate'
 export default createStore({
+  plugins: [createPersistedState({
+    reducer: (values) => {
+      return {
+        cityName: values.cityName,
+        cityId: values.cityId
+      }
+    }
+  })],
   strict: true,
   state: { // 共享状态
     cityName: '北京',
@@ -20,6 +28,9 @@ export default createStore({
     },
     changeCinemaList (state, list) {
       state.cinemaList = list
+    },
+    clearCinemaList (state) {
+      state.cinemaList = []
     }
   },
   actions: { // 异步请求数据的地方

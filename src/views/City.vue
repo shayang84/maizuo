@@ -16,6 +16,7 @@
 <script>
 import axiosrequest from '@/util/axiosrequest'
 import { Toast } from 'vant'
+import { mapMutations } from 'vuex'
 export default {
   data () {
     return {
@@ -41,6 +42,7 @@ export default {
     })
   },
   methods: {
+    ...mapMutations(['changeCityName', 'changeCityId']),
     handleChange (index) {
       // console.log(123);
       Toast(index)
@@ -70,8 +72,11 @@ export default {
       // console.log(item.name, item.cityId)
       // this.$store.state.cityName = item.name
       // this.$store.state.cityId = item.cityId
-      this.$store.commit('changeCityName', item.name)
-      this.$store.commit('changeCityId', item.cityId)
+
+      // this.$store.commit('changeCityName', item.name)
+      // this.$store.commit('changeCityId', item.cityId)
+      this.changeCityName(item.name)
+      this.changeCityId(item.cityId)
       this.$router.back()
     }
   }

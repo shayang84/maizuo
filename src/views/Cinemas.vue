@@ -100,11 +100,13 @@ export default {
       // console.log('click');
     },
     onClickLeft () {
+      // 清空vue缓存数据
+      this.$store.commit('clearCinemaList')
       this.$router.push('/city')
     },
     onClickRight () {
       this.$router.push('/cinemas/search')
-      }
+    }
   }
 }
 </script>
