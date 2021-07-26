@@ -1,0 +1,14 @@
+<template>
+    <div>
+        <ul>
+            <li>sidebar</li>
+            <li>sidebar</li>
+            <li>sidebar</li>
+            <li>sidebar</li>
+            <li>sidebar</li>
+            <li>sidebar</li>
+            <li>sidebar</li>
+            <li>sidebar</li>
+        </ul>
+    </div>
+</template>
