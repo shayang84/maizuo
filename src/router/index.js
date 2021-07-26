@@ -8,7 +8,7 @@ import Commingsoon from '../views/films/Commingsoon.vue'
 import Detail from '../views/films/Detail.vue'
 import City from '../views/City.vue'
 import Search from '../views/Search.vue'
-// 什么时候全称
+// 什么时候全称？
 // import Login from '../views/Login.vue'
 
 const routes = [
